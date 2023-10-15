@@ -125,32 +125,32 @@ const Doc_setting: React.FC = () => {
               <tr>
                 <td>9:00 AM - 9:30 AM</td>
                 <td>
-                  <button className={s9 ? "available" : "not-available"} onClick={() => setS9(handleClick(s9, t9))}>
-                    {s9 ? "Available" : "Not-available"}
+                  <button className={!s9 ? "available" : "not-available"} onClick={() => setS9(handleClick(s9, t9))}>
+                    {!s9 ? "Available" : "Not-available"}
                   </button>
                 </td>
               </tr>
               <tr>
                 <td>9:30 AM - 10:00 AM</td>
                 <td>
-                  <button className={s93 ? "available" : "not-available"} onClick={() => setS93(handleClick(s93, t93))}>
-                    {s93 ? "Available" : "Not-available"}
+                  <button className={!s93 ? "available" : "not-available"} onClick={() => setS93(handleClick(s93, t93))}>
+                    {!s93 ? "Available" : "Not-available"}
                   </button>
                 </td>
               </tr>
               <tr>
                 <td>10:00 AM - 10:30 AM</td>
                 <td>
-                  <button className={s10 ? "available" : "not-available"} onClick={() => setS10(handleClick(s10, t10))}>
-                    {s10 ? "Available" : "Not-available"}
+                  <button className={!s10 ? "available" : "not-available"} onClick={() => setS10(handleClick(s10, t10))}>
+                    {!s10 ? "Available" : "Not-available"}
                   </button>
                 </td>
               </tr>
               <tr>
                 <td>10:30 AM - 11:00 AM</td>
                 <td>
-                  <button className={s103 ? "available" : "not-available"} onClick={() => setS103(handleClick(s103, t103))}>
-                    {s103 ? "Available" : "Not-available"}
+                  <button className={!s103 ? "available" : "not-available"} onClick={() => setS103(handleClick(s103, t103))}>
+                    {!s103 ? "Available" : "Not-available"}
                   </button>
                 </td>
               </tr>

@@ -1,9 +1,8 @@
 import React from "react";
 import Cookies from "js-cookie";
-//import { HealmeLogo } from "../../../constants/constants";
-//import { HomePagePic } from "../../../constants/constants";
 import { useEffect } from "react";
 import "./_patient-dashboard.css";
+import GetAppointment from "../getappointment/getappointment";
 
 
 const Patient_dash:React.FC = () => {
@@ -12,6 +11,13 @@ const Patient_dash:React.FC = () => {
     const LogOut = ()=>{
         Cookies.set("patname","err");
         window.location.href = '/patient_login';
+    }
+    const ViewAppointments = ()=>{
+        window.location.href = '/view_appointments';
+    }
+    const getappoin = ()=>{
+       
+        window.location.href = '/get_appointment';
     }
     useEffect(() => {
         //Runs on every render
@@ -23,10 +29,16 @@ const Patient_dash:React.FC = () => {
     
     return(
         <div className="header_container">
-                Welcome Fuckinnnggggggg {usr}
+                Welcome  {usr}
             <div className="Buttons">
                 <button className="LogoutButton" onClick={LogOut}>
                     Log Out
+                </button>
+                <button className="SettimingButton" onClick={getappoin}>
+                Get Appointment
+                </button>
+                <button className="ViewAppointmentButton" onClick={ViewAppointments}>
+                View Appointments
                 </button>
             </div>
         </div>

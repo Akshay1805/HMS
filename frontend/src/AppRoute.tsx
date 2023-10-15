@@ -7,6 +7,12 @@ import PatientLogin from "../src/js/Pages/Login/PatientLogin/PatientLogin";
 import Home from './js/Pages/Home/Home';
 import Patient_dash from './js/Pages/patient-dashboard/patient-dashboard';
 import Doc_setting from './js/Pages/Doctor-settiming/doctor-settiming';
+import GetAppointment from './js/Pages/getappointment/getappointment';
+import Doc_select from './js/Pages/doc-select/doc-select';
+import Confirmtiming from './js/Pages/Confirmtiming/Confirmtiming';
+import View_appointment from './js/Pages/ViewAppointment/ViewAppointment';
+import Setappointtiming from './js/Pages/Setappointtiming/Setappointtiming';
+import Test from './js/Pages/tem/tem';
 //import ProtectedRoute from './ProtectedRoute'; // Import the ProtectedRoute component
 
 function App() {
@@ -23,11 +29,15 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/patient_dashboard' element={<Patient_dash />} />
         <Route path='/doctor_set_timing' element={<Doc_setting />} />        <Route
-          path='/doctor_dashboard'
-          element={<Doctor_dash/>}
-          
-        />
+          path='/doctor_dashboard' element={<Doctor_dash/>}/>
+        <Route path='/get_appointment' element={<GetAppointment />} />
+        <Route path='/doctor-select' element={<Doc_select />} />
+        <Route path='/confirm-timing' element={<Confirmtiming />} /> 
+        <Route path='/test' element={<Test />} /> 
+        <Route path='/select-timing' element={<Setappointtiming />} />
+        <Route path='/view_appointments' element={<View_appointment />} /> 
       </Routes>
+      
     </Router>
   );
 }

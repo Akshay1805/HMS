@@ -26,7 +26,7 @@ const Doctor_dash:React.FC = () => {
     
     return(
         <div className="header_container">
-                Welcome Fuckinnnggggggg {usr}
+                Welcome  {usr}
             <div className="Buttons">
                 <button className="LogoutButton" onClick={LogOut}>
                     Log Out
