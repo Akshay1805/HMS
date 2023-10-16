@@ -53,23 +53,27 @@ useEffect(() => {
     fetchData(); // Call the fetch data function when the component mounts
   }, [usr]); 
 
+  const handleClick = () => {
+    window.location.href = '/patient_dashboard'
+  }
+
     return (
-        <div className="home-page-container">
-            <div className="header-container">
-                <div className="logo-container">
-                    <img className="logo-img" src={HealmeLogo} alt="Logo" />
+        <div className="doc-select-home-page-container">
+            <div className="doc-select-header-container">
+                <div className="doc-select-logo-container">
+                    <img className="doc-select-logo-img" src={HealmeLogo} alt="Logo" onClick={handleClick} />
                 </div>
             </div>
-            <div>
-                listing {Cookies.get('doctype')}
+            <div className="doc-select-heading">
+                Listing {Cookies.get('doctype')}
             </div>
-            <div className="body-container" id='list'>
+            <div className="doc-select-body-container" id='list'>
                 {data.map((item, index) => (
-                <div className="doctor-confirm-panel" key={index}>
-                        <div className="doc-photo">
-                            <img className="doc" src={DocPic} alt="Pic of the doctor" />
+                <div className="doc-select-doctor-confirm-panel" key={index}>
+                        <div className="doc-select-doc-photo">
+                            <img className="doc-select-doc" src={DocPic} alt="Pic of the doctor" />
                         </div>
-                        <div className="appointment-description">
+                        <div className="doc-select-appointment-description">
                             <div>
                                 {item.name}
                             </div>
@@ -77,7 +81,7 @@ useEffect(() => {
                                 Consultant - Dental Surgery BDS
                             </div>
                         </div>
-                        <button type="button" className="doctor-btn" onClick={()=>handleDoctorButtonClick(item.name)} >
+                        <button type="button" className="doc-select-doctor-btn" onClick={()=>handleDoctorButtonClick(item.name)} >
                             Book An Appointment
                         </button>
                 </div>

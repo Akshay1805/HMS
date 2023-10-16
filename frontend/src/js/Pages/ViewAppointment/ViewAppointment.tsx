@@ -71,7 +71,7 @@ const View_appointment:React.FC = () => {
                     </button>
         </div>
         
-        <div className="body-container" id='list'>
+        <div className="appbody-container" id='list'>
             {data.map((item, index) => (
             <div className="doctor-confirm-panel" key={index}>
                     <div className="doc-photo">

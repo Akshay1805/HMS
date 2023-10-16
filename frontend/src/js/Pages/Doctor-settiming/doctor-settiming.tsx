@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import axios from "axios";
 import "./_doctor-settiming.css";
-
+import { HealmeLogo } from "../../../constants/constants";
 const Doc_setting: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const t9 = '9:00:00';
@@ -89,15 +89,12 @@ const Doc_setting: React.FC = () => {
   };
 
   return (
-    <div>
-      <div>vjnsjk njkvfnjk fn</div>
-      <div>Set timing page for {usr}</div>
-      <div>You are a doctor pola</div>
-      <div>
-        <button className="LogoutButton" onClick={LogOut}>
-          Log Out
-        </button>
+    <div className="bo">
+      <div className="logo-container">
+        <img className="logo-img" src={ HealmeLogo } alt="Logo" />
       </div>
+      <div>Welcome {usr}</div>
+     
       <div className="container">
         <h1>Enter Date and Time</h1>
         <form>
@@ -157,6 +154,11 @@ const Doc_setting: React.FC = () => {
             </tbody>
           </table>
         </body>
+      </div>
+      <div>
+        <button className="LogoutButton" onClick={LogOut}>
+          Log Out
+        </button>
       </div>
     </div>
   );

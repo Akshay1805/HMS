@@ -68,7 +68,12 @@ def get_time():
 @app.route("/get_file", methods=["POST"])
 def get_file():
     try:
-        filename = 'admin930002023-10-27.png'
+        x =request.get_json()
+        tem=x['message']
+        filename=tem.replace(":",'')
+        filename=filename+'.png'
+        print(filename)
+        #filename = 'admin930002023-10-27.png'
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         print(file_path)
         print(os.getcwd())

@@ -37,25 +37,25 @@ const Confirmtiming:React.FC = () => {
   
   
     return (
-        <div className="home-page-container">
-            <div className="header-container">
-                <div className="logo-container">
-                    <img className="logo-img" src={ HealmeLogo } alt="Logo" />
+        <div className="confirm-timing-home-page-container">
+            <div className="confirm-timing-header-container">
+                <div className="confirm-timing-logo-container">
+                    <img className="confirm-timing-logo-img" src={ HealmeLogo } alt="Logo" />
                 </div>
-                    <button type="button" className="doctor-btn" onClick={Logout}>
+                    <button type="button" className="confirm-timing-doctor-btn" onClick={Logout}>
                          Log out
                     </button>
-                    <button type="button" className="doctor-btn" onClick={Godash}>
+                    <button type="button" className="confirm-timing-doctor-btn" onClick={Godash}>
                          home
                     </button>
             </div>
            
-            <div className="body-container" id='list'>
-                <div className="doctor-confirm-panel" >
-                    <div className="doc-photo">
-                         <img className="doc" src= { DocPic } alt="Pic of the doctor" />
+            <div className="confirm-timing-body-container" id='list'>
+                <div className="confirm-timing-doctor-confirm-panel" >
+                    <div className="confirm-timing-doc-photo">
+                         <img className="confirm-timing-doc" src= { DocPic } alt="Pic of the doctor" />
                     </div>
-                    <div className="appointment-description">
+                    <div className="confirm-timing-appointment-description">
                         <div>
                         {Cookies.get('docselect')}
                         </div>
@@ -69,15 +69,12 @@ const Confirmtiming:React.FC = () => {
                             {Cookies.get('selecteddate')} 
                         </div>
                     </div>
-                    <button type="button" className="doctor-btn" onClick={confirmButtonClick}>
+                    <button type="button" className="confirm-timing-doctor-btn" onClick={confirmButtonClick}>
                          Confirm Appointment
                     </button>
                 </div>
                 
             </div>
-            {/* <div className="bottom-border">
-            </div>
-            <div className="copyrights-text">©HEALME TECHNOLOGIES</div> */}
         </div>
     )
 }

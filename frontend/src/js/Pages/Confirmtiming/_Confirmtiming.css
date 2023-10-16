@@ -1,15 +1,15 @@
-.header-container {
+.confirm-timing-header-container {
     position: sticky;
     padding-top: 34px;
     padding-left: 72px;
 }
 
-.logo-img {
+.confirm-timing-logo-img {
     width: 247px;
     height: 52px;
 }
 
-.body-content-header {
+confirm-timing-.body-content-header {
     color: var(--light-primary-80, #13274F);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 64px;
@@ -22,14 +22,14 @@
     width: 730px;
 }
 
-.sign-up-panel {
+.confirm-timing-sign-up-panel {
     display: flex;
     justify-content: space-between;
     margin-right: 80px;
     width: 615px;
 }
 
-.doctor-btn {
+.confirm-timing-doctor-btn {
     color: #13274F;
     border-style: solid;
     border-color: #13274F;
@@ -44,28 +44,28 @@
     background-color: white;
 }
 
-.home-picture-img {
+.confirm-timing-home-picture-img {
     height: 800px;
     width: 800px;
 }
 
-.bottom-border {
+.confirm-timing-bottom-border {
     height: 100px;
     background-color: rgb(204 251 241);
 }
 
-.copyrights-text {
+.confirm-timing-copyrights-text {
     display: flex;
     justify-content: center;
     color: rgb(113 113 122);
 }
 
-.body-container {
+.confirm-timing-body-container {
     display: flex;
     justify-content: center;
 }
 
-.doctor-confirm-panel {
+.confirm-timing-doctor-confirm-panel {
     display: flex;
     align-items: center;
     width: 50%;
@@ -76,17 +76,17 @@
     background: rgba(149, 197, 212, 0.40);  
     
 }
-.doc-photo {
+.confirm-timing-doc-photo {
     margin-right: 50px;
     align-items: center;
 }
 
-.doc {
+.confirm-timing-doc {
     height: 250px;
     width: 200px;
 }
 
-.appointment-description {
+.confirm-timing-appointment-description {
     align-items: start;
     margin-right: 50px;
 }
