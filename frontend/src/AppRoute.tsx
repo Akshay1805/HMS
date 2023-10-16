@@ -25,10 +25,11 @@ function App() {
   return (
     <Router>
       <Routes>
+      <Route path='/home' element={<Home />} />
         <Route path='/' element={<Applink />} />
         <Route path='/doctor_login' element={<DoctorLogin />} />
         <Route path='/patient_login' element={<PatientLogin />} />
-        <Route path='/home' element={<Home />} />
+        
         <Route path='/patient_dashboard' element={<Patient_dash />} />
         <Route path='/doctor_set_timing' element={<Doc_setting />} />        <Route
           path='/doctor_dashboard' element={<Doctor_dash/>}/>
