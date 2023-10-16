@@ -1,40 +1,45 @@
-import React, { useEffect,useState } from "react";
-import { HealmeLogo } from "../../../constants/constants";
-import { DocPic } from "../../../constants/constants";
-import Cookies from "js-cookie";
+import React, { useState } from "react";
 import axios from "axios";
 import "./_tem.css";
-const Test:React.FC = () => {
-        // Sample data
-        const data = [
-          { name: 'Item 1' },
-          { name: 'Item 2' },
-          { name: 'Item 3' },
-        ];
-      
-        return (
-          <div>
-            {data.map((item, index) => (
-              <div className="doctor-confirm-panel" key={index}>
-            <div className="doc-photo">
-                <img className="doc" src={DocPic} alt="Pic of the doctor" />
-            </div>
-            <div className="appointment-description">
-                <div>
-                    {item.name}
-                </div>
-                <div>
-                    Consultant - Dental Surgery BDS
-                </div>
-            </div>
-            <button type="button" className="doctor-btn" >
-                Book An Appointment
-            </button>
-            </div>
-            ))}
-          
-        </div>
-        );
-      };
-      
-      export default Test;
+
+
+const Test = () => {
+
+  const [file, setFile] = useState("");
+  const [fileData, setFileData] = useState<string | null>(''); // Updated state type
+  const details={
+    
+  }
+  const handleFileRequest = () => {
+    axios
+      .post("/get_file",details)
+      .then((response) => {
+        const blob = new Blob([response.data], { type: response.headers["content-type"] });
+        const url = window.URL.createObjectURL(blob);
+        setFileData(url);
+      })
+      .catch((error) => {
+        console.error("Error requesting file:", error);
+      });
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Enter file name"
+        value={file}
+        onChange={(e) => setFile(e.target.value)}
+      />
+      <button onClick={handleFileRequest}>Request File</button>
+      {fileData && (
+        <a href={fileData} download="downloaded_file">
+          Download File
+        </a>
+      )}
+    </div>
+  );
+  
+}
+
+export default Test;

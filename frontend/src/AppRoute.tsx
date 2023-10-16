@@ -13,6 +13,7 @@ import Confirmtiming from './js/Pages/Confirmtiming/Confirmtiming';
 import View_appointment from './js/Pages/ViewAppointment/ViewAppointment';
 import Setappointtiming from './js/Pages/Setappointtiming/Setappointtiming';
 import Test from './js/Pages/tem/tem';
+import Viewdoctorappointment from './js/Pages/Viewdoctorappointment/Viewdoctorappointment';
 //import ProtectedRoute from './ProtectedRoute'; // Import the ProtectedRoute component
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path='/doctor-select' element={<Doc_select />} />
         <Route path='/confirm-timing' element={<Confirmtiming />} /> 
         <Route path='/test' element={<Test />} /> 
+        <Route path='/view_doc_appointment' element={<Viewdoctorappointment />} /> 
         <Route path='/select-timing' element={<Setappointtiming />} />
         <Route path='/view_appointments' element={<View_appointment />} /> 
       </Routes>

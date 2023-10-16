@@ -9,6 +9,9 @@ import "./_doctor-dashboard.css";
 const Doctor_dash:React.FC = () => {
 
     var usr =Cookies.get("docname");
+    const viewdocappoin =()=>{
+        window.location.href = '/view_doc_appointment';
+    }
     const LogOut = ()=>{
         Cookies.set("docname","err");
         window.location.href = '/doctor_login';
@@ -33,6 +36,9 @@ const Doctor_dash:React.FC = () => {
                 </button>
                 <button className="SetTimingButton" onClick={SetTiming}>
                     Set timing
+                </button>
+                <button className="SetTimingButton" onClick={viewdocappoin}>
+                    View Todays apppointments
                 </button>
             </div>
         </div>
